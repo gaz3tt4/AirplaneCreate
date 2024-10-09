@@ -13,13 +13,13 @@
                     <form id="form-create-airplane" method="POST" action="{{route('airplane.store')}}" >
                         @csrf
                         <div>
-                            <div>
+                            <div class="block mt-4">
                                 <label for="brendAirplane">Brend</label>
-                                <input type="String" name="brandAirplane" id="brandAirplane">
+                                <x-text-input  type="String" name="brandAirplane" id="brandAirplane">
                             </div>
                             <div>
                                 <label for="modelAirplane">Model</label>
-                                <input type="String" class="form" name="modelAirplane" id="modelAirplane">
+                                <x-text-input type="String" class="form" name="modelAirplane" id="modelAirplane">
                             </div>
                             <div>
                                <label for="yearAirplane">Year</label>

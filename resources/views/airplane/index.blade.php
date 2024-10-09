@@ -15,7 +15,7 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
 
-                    <div>
+                    <div class="mt-1 block w-full">
                         @foreach ($airplanes As $airplane)
                             <div class="p-6 text-gray-900">
                                 <p>Brend: {{$airplane->brand}}</p>
@@ -26,7 +26,9 @@
                                 @elseif ($airplane->status==0)
                                     <p>Status: Inativo</p>
                                 @endif
-                                <a href="{{route('airplane.edit', $airplane->id)}}">EDITAR</a>
+                                <x-primary-button>
+                                    <a href="{{route('airplane.edit', $airplane->id)}}">EDITAR</a>
+                                </x-primary-button>
                             </div>
                         @endforeach
                     </div>
