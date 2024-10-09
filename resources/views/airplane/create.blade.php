@@ -14,15 +14,15 @@
                         @csrf
                         <div>
                             <div>
-                                <x-text-input for="brendAirplane">Brend</x-text-input>
+                                <label for="brendAirplane">Brend</label>
                                 <input type="String" name="brandAirplane" id="brandAirplane">
                             </div>
                             <div>
-                                <x-text-input for="modelAirplane">Model</x-text-input>
+                                <label for="modelAirplane">Model</label>
                                 <input type="String" class="form" name="modelAirplane" id="modelAirplane">
                             </div>
                             <div>
-                               <x-text-input for="yearAirplane">Year</x-text-input>
+                               <label for="yearAirplane">Year</label>
                                 <input type="Number" class="form" name="yearAirplane" id="yearAirplane">
                             </div>
                             <div>

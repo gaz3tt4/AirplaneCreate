@@ -15,7 +15,7 @@ Route::prefix('airplane')->group(function(){
     Route::get('/create', [AirplaneController::class, 'create'])->name('airplane.create');
     Route::post('/store', [AirplaneController::class, 'store'])->name('airplane.store');
     Route::get('/edit/{id}', [AirplaneController::class, 'edit'])->name('airplane.edit');
-    Route::post('/update/{id}', [AirplaneController::class, 'update'])->name('airplane.update');
+    Route::get('/update/{id}', [AirplaneController::class, 'update'])->name('airplane.update');
     Route::get('/destroy/{id}', [AirplaneController::class, 'destroy'])->name('airplane.destroy');
 
 })->middleware(['auth', 'verified']);

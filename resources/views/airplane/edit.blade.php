@@ -38,7 +38,7 @@
                                     @endif
                                 </select>
                             </div>
-                                <x-primary-button type="submit" class="ms-3">Enviar</x-primary-button>
+                                <x-primary-button type="submit" class="ms-3">SALVAR</x-primary-button>
                                 <x-danger-button>
                                     <a style="by" href="{{route('airplane.destroy', $airplane->id)}}">DELETAR</a>
                                 </x-danger-button>
