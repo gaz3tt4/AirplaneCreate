@@ -60,6 +60,15 @@ class AirplaneController extends Controller
         return redirect('/airplane');
     }
 
+    public function Inactive(Request $request, $id)
+    {
+        $airplane = Airplane::find($id);
+        $airplane->Status = 0;
+        $airplane->update();
+        return redirect('/airplane');
+
+    }
+
 
 
 }
