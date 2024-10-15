@@ -21,6 +21,15 @@ Route::prefix('airplane')->group(function(){
 
 })->middleware(['auth', 'verified']);
 
+Route::prefix('pilot')->group(function(){
+    Route::get('/', [PilotController::class, 'index'])->name('pilot.index');
+    Route::get('/create', [PilotController::class, 'create'])->name('pilot.create');
+    Route::post('/store', [PilotController::class, 'store'])->name('pilot.store');
+    Route::get('/edit/{id}', [PilotController::class, 'edit'])->name('pilot.edit');
+    Route::get('/update/{id}', [PilotController::class, 'update'])->name('pilot.update');
+    Route::get('/destroy/{id}', [PilotController::class, 'destroy'])->name('pilot.destroy');
+})->middleware(['auth', 'verified']);
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
