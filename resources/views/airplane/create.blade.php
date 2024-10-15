@@ -15,11 +15,11 @@
                         <div>
                             <div class="block mt-4">
                                 <label for="brendAirplane">Brend</label>
-                                <input  type="String" name="brandAirplane" id="brandAirplane">
+                                <input  type="text" name="brandAirplane" id="brandAirplane">
                             </div>
                             <div>
                                 <label for="modelAirplane">Model</label>
-                                <input type="String" class="form" name="modelAirplane" id="modelAirplane">
+                                <input type="text" class="form" name="modelAirplane" id="modelAirplane">
                             </div>
                             <div>
                                <label for="yearAirplane">Year</label>

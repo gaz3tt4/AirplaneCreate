@@ -13,5 +13,6 @@ class Pilot extends Model
         'cpf',
         'dt_birth',
         'RAB',
+        'phone',
     ];
 }

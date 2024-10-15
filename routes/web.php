@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AirplaneController;
+use App\Http\Controllers\PilotController;
 use Illuminate\Support\Facades\Route;
 
 
