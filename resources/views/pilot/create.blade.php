@@ -13,7 +13,7 @@
                         <div>
                             <div class="mt-4">
                                 <x-input-label for="name" :value="__('Nome')" />
-                                <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus />
+                                <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required/>
                                 <x-input-error :messages="$errors->get('name')" class="mt-2" />
                             </div>
                             <div >
@@ -32,11 +32,11 @@
                                 <x-input-error :messages="$errors->get('RAB')" class="mt-2" />
                             </div>
                             <div>
-                                <x-input-label for="dt_brith" :value="__('Data de Nascimento')" />
-                                <x-text-input id="dt_brith" class="block mt-1 w-full" type="date" name="dt_brith" :value="old('dt_brith')" required />
-                                <x-input-error :messages="$errors->get('dt_brith')" class="mt-2" />
+                                <x-input-label for="date_brith" :value="__('Data de Nascimento')" />
+                                <x-text-input id="date_brith" class="block mt-1 w-full" type="date" name="date_brith" :value="old('date_brith')" required />
+                                <x-input-error :messages="$errors->get('date_brith')" class="mt-2" />
                             </div>
-                            <div>
+                            <div class="flex items-center mt-4">
                                 <x-primary-button type="submit">{{ __('Cadastrar') }}</x-primary-button>
                             </div>
                         </div>

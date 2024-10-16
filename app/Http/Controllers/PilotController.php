@@ -33,4 +33,24 @@ class PilotController extends Controller
         $pilot->save();
         return redirect()->route('pilot.index');
     }
+
+    public function edit($id)
+    {
+        $pilot = Pilot::find($id);
+        return view('pilot.edit', [
+            'pilot'=> $pilot,
+        ]);
+    }
+
+    public function update(Request $request, $id)
+    {
+        $pilot = Pilot::find($id);
+        $pilot->name = $request->input('name');
+        $pilot->CPF = $request->input('CPF');
+        $pilot->phone = $request->input('phone');
+        $pilot->RAB = $request->input('RAB');
+        $pilot->date_brith = $request->input('date_brith');
+        $pilot->update();
+        return redirect()->route('pilot.index');
+    }
 }

@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('cpf');
             $table->string('phone');
             $table->string('RAB');
-            $table->date('birth_date');
+            $table->date('date_brith');
             $table->timestamps();
         });
     }
