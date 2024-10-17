@@ -14,11 +14,11 @@
                 <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                     <div class="p-6 text-gray-900">
                         <div>
-                            <p>Nome:{{$pilot->name}}</p>
-                            <p>CPF:{{$pilot->cpf}}</p>
-                            <datalist>Data de Nascimento:{{$pilot->dt_brith}}</datalist>
-                            <p>RAB:{{$pilot->RAB}}</p>
-                            <p>Telefone:{{$pilot->phone}}</p>
+                            <p>Nome: {{$pilot->name}}</p>
+                            <p>CPF: {{$pilot->cpf}}</p>
+                            <datalist>Data de Nascimento: {{$pilot->dt_brith}}</datalist>
+                            <p>RAB: {{$pilot->RAB}}</p>
+                            <p>Telefone: {{$pilot->phone}}</p>
                             <div>
                                 <x-primary-button>
                                     <a href="{{route('pilot.edit', $pilot->id)}}">EDITAR</a>

@@ -14,19 +14,22 @@
                         @csrf
                         <div>
                             <div class="block mt-4">
-                                <label for="brendAirplane">Brend</label>
-                                <input  type="text" name="brandAirplane" id="brandAirplane">
+                                <x-input-label for="brandAirplane" :value="__('Brand')" />
+                                <x-text-input id="brandAirplane" class="block mt-1 w-full" type="text" name="brandAirplane" :value="old('brandAirplane')" required/>
+                                <x-input-error :messages="$errors->get('brandAirplane')" class="mt-2" />
                             </div>
                             <div>
-                                <label for="modelAirplane">Model</label>
-                                <input type="text" class="form" name="modelAirplane" id="modelAirplane">
+                                <x-input-label for="modelAirplane" :value="__('Model')" />
+                                <x-text-input id="modelAirplane" class="block mt-1 w-full" type="text" name="modelAirplane" :value="old('modelAirplane')" required/>
+                                <x-input-error :messages="$errors->get('modelAirplane')" class="mt-2" />
                             </div>
                             <div>
-                               <label for="yearAirplane">Year</label>
-                                <input type="Number" class="form" name="yearAirplane" id="yearAirplane">
+                                <x-input-label for="yearAirplane" :value="__('Year')" />
+                                <x-text-input id="yearAirplane" class="block mt-1 w-full" type="number" name="yearAirplane" :value="old('yearAirplane')" required/>
+                                <x-input-error :messages="$errors->get('yearAirplane')" class="mt-2" />
                             </div>
                             <div>
-                                <label for="status">status</label>
+                                <x-input-label for="status" :value="__('Status')" />
                                 <select class="form-control" name="status" id="status" value="{{old('status', @$airplane->status)}}" required>
                                     <option value="">Selecione...</option>
                                     <option value="1">Active</option>

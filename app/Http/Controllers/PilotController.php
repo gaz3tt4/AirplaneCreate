@@ -53,4 +53,11 @@ class PilotController extends Controller
         $pilot->update();
         return redirect()->route('pilot.index');
     }
+
+    public function destroy($id)
+    {
+        $pilot = Pilot::find($id);
+        $pilot->delete();
+        return redirect()->route('pilot.index');
+    }
 }

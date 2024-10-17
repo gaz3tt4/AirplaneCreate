@@ -18,12 +18,12 @@
                             </div>
                             <div >
                                 <x-input-label for="CPF" :value="__('CPF')" />
-                                <x-text-input id="CPF" class="block mt-1 w-full" type="text" name="CPF" :value="old('CPF', $pilot->CPF)" required />
+                                <x-text-input id="CPF" class="block mt-1 w-full" type="text" name="CPF" :value="old('CPF', $pilot->cpf)" required />
                                 <x-input-error :messages="$errors->get('CPF')" class="mt-2" />
                             </div>
                             <div>
                                 <x-input-label for="Phone" :value="__('Phone')" />
-                                <x-text-input id="phone" class="block mt-1 w-full" type="text" name="Phone" :value="old('phone', $pilot->phone)" required />
+                                <x-text-input id="phone" class="block mt-1 w-full" type="text" name="phone" :value="old('phone', $pilot->phone)" required />
 
                             </div>
                             <div>
@@ -38,6 +38,9 @@
                             </div>
                             <div class="flex items-center mt-4">
                                 <x-primary-button type="submit">{{ __('EDITAR') }}</x-primary-button>
+                                <x-danger-button>
+                                    <a style="by" href="{{route('pilot.destroy', $pilot->id)}}">DELETAR</a>
+                                </x-danger-button>
                             </div>
                         </div>
                     </form>
