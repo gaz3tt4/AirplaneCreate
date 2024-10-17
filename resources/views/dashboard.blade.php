@@ -11,7 +11,6 @@
                     <div class="p-6 text-gray-900">
                         <div>
                             <div>
-                                <image src="{{asset('img/logo.png')}}" alt="logo" width="10" height="10"></image>
                                 <a href="{{route('airplane.index')}}">Aviões</a>
                             </div>
                         </div>
